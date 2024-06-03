@@ -33,3 +33,11 @@ pnpm-debug.log*
 
 # Coverage reports
 coverage/
+
+# Prettier cache (if using Prettier cache in future)
+.prettier-cache/
+
+# Additional potential ignores
+*.cache/
+.cache/
+*.config.js

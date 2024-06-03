@@ -1,5 +1,6 @@
 ---
-import "../styles/global.css";
+import Navigation from '../components/Navigation.svelte';
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -10,7 +11,11 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="flex items-center justify-center min-h-screen bg-base-100 text-base-content">
-    <slot />  <!-- Your content will be inserted here -->
+  <body
+    class="flex flex-col items-center justify-center min-h-screen bg-base-100 text-base-content"
+  >
+    <Navigation />
+    <slot />
+    <!-- Your content will be inserted here -->
   </body>
 </html>

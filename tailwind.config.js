@@ -1,14 +1,13 @@
 // tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./src/**/*.{html,js,ts,jsx,tsx,svelte}", // Include Svelte files
-    "./public/**/*.html",
+    './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
+    './public/**/*.html',
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    require("daisyui"), // Add DaisyUI plugin
+    require('daisyui'), // Add DaisyUI plugin
   ],
 };
