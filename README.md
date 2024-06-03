@@ -13,4 +13,3 @@ Our site leverages the following technologies:
   - **Firebase Auth** 🔐: For secure and easy authentication.
   - **Firebase Storage** 🗄️: For storing and serving user-generated content.
 - **Tailwind CSS** 🎨: The utility-first CSS framework for rapid UI development.
-- **DaisyUI** 🌼: Beautiful and customizable UI components built on top of Tailwind CSS.
