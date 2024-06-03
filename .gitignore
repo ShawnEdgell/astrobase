@@ -11,14 +11,25 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
+*.log
 
 # environment variables
 .env
 .env.production
+*.local
 
 # macOS-specific files
 .DS_Store
 
 # jetbrains setting folder
 .idea/
+
+# Firebase
+.firebase/
+.firebaserc
+
+# VSCode
+.vscode/
+
+# Coverage reports
+coverage/
