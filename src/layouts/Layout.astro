@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.svelte';
 import '../styles/global.css';
+import Modal from '../components/Modal.svelte';
 ---
 
 <html lang="en">
@@ -11,11 +12,14 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body
-    class="flex flex-col items-center justify-center min-h-screen bg-base-100 text-base-content"
-  >
-    <Navigation />
-    <slot />
+  <body>
+    <Modal />
+    <div class="w-full sticky top-0">
+      <Navigation />
+    </div>
+    <article class="prose py-12 mx-4">
+      <slot />
+    </article>
     <!-- Your content will be inserted here -->
   </body>
 </html>
