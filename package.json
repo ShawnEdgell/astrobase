@@ -21,6 +21,7 @@
     "lru-cache": "^10.2.2",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
+    "theme-change": "^2.5.0",
     "typescript": "^5.4.5"
   },
   "devDependencies": {

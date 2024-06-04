@@ -2,10 +2,23 @@
 import Navigation from '../components/Navigation.svelte';
 import '../styles/global.css';
 import Modal from '../components/Modal.svelte';
+import Footer from '../components/Footer.svelte';
 ---
 
 <html lang="en">
   <head>
+    <script is:inline>
+      // Prevent the FART effect.
+      if (
+        localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
@@ -17,9 +30,23 @@ import Modal from '../components/Modal.svelte';
     <div class="w-full sticky top-0">
       <Navigation />
     </div>
-    <article class="prose py-12 mx-4">
+    <article class="prose">
       <slot />
     </article>
     <!-- Your content will be inserted here -->
+    <Footer />
+    <script type="module">
+      import { themeChange } from 'theme-change';
+      themeChange(false); // false parameter is required for Svelte
+
+      // Ensure the theme persists across navigations
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.classList.toggle(
+          'dark',
+          savedTheme === 'dark',
+        );
+      }
+    </script>
   </body>
 </html>

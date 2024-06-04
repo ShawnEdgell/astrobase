@@ -1,7 +1,10 @@
+<script>
+  import Lightswitch from "./Lightswitch.svelte";
+</script>
+
 <div class="drawer">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
   <div class="drawer-content flex flex-col">
-    <!-- Navbar -->
     <div class="w-full navbar bg-base-300">
       <div class="flex-none lg:hidden">
         <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
@@ -9,23 +12,22 @@
         </label>
       </div> 
       <div class="flex-1">
-      <a href="/" class="font-bold px-2 mx-2">Navbar Title</a>
-    </div>
+        <a href="/" class="font-bold px-2 mx-2">Website Name</a>
+      </div>
       <div class="flex-none hidden lg:block">
-        <ul class="menu menu-horizontal">
-          <!-- Navbar menu content here -->
+        <ul class="menu-horizontal space-x-6 mr-6">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><button onclick="my_modal_5.showModal()">Login</button></li>
+          <li><button onclick="my_modal_5.showModal()">Modal</button></li>
         </ul>
       </div>
+      <Lightswitch />
     </div>
   </div> 
   <div class="drawer-side">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
     <ul class="menu p-4 w-80 min-h-full bg-base-200">
-      <!-- Sidebar content here -->
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/contact">Contact</a></li>

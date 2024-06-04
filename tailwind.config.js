@@ -1,5 +1,6 @@
 // tailwind.config.js
 module.exports = {
+  darkMode: 'class', // Use the class strategy for simplicity
   content: [
     './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
     './public/**/*.html',
@@ -8,4 +9,40 @@ module.exports = {
     extend: {},
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  daisyui: {
+    themes: [
+      'light',
+      'dark',
+      'cupcake',
+      'bumblebee',
+      'emerald',
+      'corporate',
+      'synthwave',
+      'retro',
+      'cyberpunk',
+      'valentine',
+      'halloween',
+      'garden',
+      'forest',
+      'aqua',
+      'lofi',
+      'pastel',
+      'fantasy',
+      'wireframe',
+      'black',
+      'luxury',
+      'dracula',
+      'cmyk',
+      'autumn',
+      'business',
+      'acid',
+      'lemonade',
+      'night',
+      'coffee',
+      'winter',
+      'dim',
+      'nord',
+      'sunset',
+    ],
+  },
 };

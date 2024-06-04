@@ -5,9 +5,12 @@
 
 @layer base {
   html {
-    @apply h-full;
+    @apply h-screen;
   }
   body {
-    @apply h-full flex flex-col items-center;
+    @apply h-screen flex flex-col items-center;
+  }
+  article {
+    @apply my-12;
   }
 }
